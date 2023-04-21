@@ -22,7 +22,9 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     testImplementation 'junit:junit:4.12'
-    implementation 'com.android.support:appcompat-v7:23.0.1'
-    implementation 'com.android.support:design:23.0.1'
-    implementation 'com.google.android.gms:play-services:6.1.71'
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation "com.google.android.material:material:1.6.1"
+    implementation 'androidx.preference:preference:1.2.0'
+    implementation 'com.google.android.gms:play-services:20.1.0'
 }
