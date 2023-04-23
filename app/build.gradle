@@ -19,7 +19,7 @@ android {
     }
 }
 
-dependencies 2
+dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     testImplementation 'junit:junit:4.12'
     implementation 'androidx.appcompat:appcompat:1.4.1'
