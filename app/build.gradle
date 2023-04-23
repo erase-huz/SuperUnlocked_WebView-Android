@@ -28,3 +28,6 @@ dependencies 2
     implementation 'androidx.preference:preference:1.2.0'
     implementation 'com.google.android.gms:play-services:20.2.0'
 }
+
+apply plugin: 'com.google.gms.google-services'
+com.google.gms.googleservices.GoogleServicesPlugin.config.disableVersionCheck = true
