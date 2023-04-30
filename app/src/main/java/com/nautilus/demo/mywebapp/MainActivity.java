@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity
           DrawerLayout drawerLayout, 
           Toolbar toolbar, 
           int openDrawerContentDescRes, 
-          int closeDrawerContentDescRes)
+          int closeDrawerContentDescRes);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
