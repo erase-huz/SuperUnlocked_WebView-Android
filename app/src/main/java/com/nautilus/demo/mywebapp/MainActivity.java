@@ -4,12 +4,12 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.os.Bundle;
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.android.material.snackbar.Snackbar
+import com.google.android.material.snackbar.Snackbar;
 import android.view.View;
-import com.google.android.material.navigation.NavigationView
+import com.google.android.material.navigation.NavigationView;
 import androidx.appcompat.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout
-import androidx.legacy.app.ActionBarDrawerToggle
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.legacy.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
