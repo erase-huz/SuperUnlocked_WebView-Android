@@ -3,7 +3,7 @@ package com.nautilus.demo.mywebapp;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.os.Bundle;
-import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import android.view.View;
 import com.google.android.material.navigation.NavigationView;
