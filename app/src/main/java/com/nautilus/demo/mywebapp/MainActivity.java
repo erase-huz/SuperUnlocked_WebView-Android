@@ -17,6 +17,12 @@ import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+        
+    ActionBarDrawerToggle(Activity activity,
+          DrawerLayout drawerLayout, 
+          Toolbar toolbar, 
+          int openDrawerContentDescRes, 
+          int closeDrawerContentDescRes)
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
