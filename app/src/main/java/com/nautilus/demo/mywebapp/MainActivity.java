@@ -18,6 +18,7 @@ import android.view.MenuItem;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
         
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
