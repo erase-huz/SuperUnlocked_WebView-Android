@@ -3,10 +3,10 @@ apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 31
-    buildToolsVersion "29.0.1"
+    buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.nautilus.demo.mywebapp"
+        applicationId "com.company.yapara.kazan"
         minSdkVersion 21
         targetSdkVersion 31
         versionCode 1
