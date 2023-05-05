@@ -17,14 +17,12 @@ import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-        
-    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        toolbar = findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         final DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -105,7 +103,7 @@ public class MainActivity extends AppCompatActivity
             // ---------------------------------  Load WebiView with Remote URL -------------------- //
             Bundle bundle = new Bundle();
             bundle.putString("type", "url");
-            bundle.putString("url", "https://danis.manlik.com.tr/");
+            bundle.putString("url", "http://www.w3schools.com/");
             fragment = new FragmentWeb();
             fragment.setArguments(bundle);
 
