@@ -1,4 +1,4 @@
-package com.nautilus.demo.mywebapp;
+package com.company.yapara.kazan;
 
 import android.app.Activity;
 import android.app.ActivityManager;
