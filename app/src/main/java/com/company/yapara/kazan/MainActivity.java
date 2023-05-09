@@ -36,8 +36,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 
-public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity {
     String url = "http://codeflarelimited.com";
     WebView webView;
     
