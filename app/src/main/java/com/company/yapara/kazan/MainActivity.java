@@ -16,7 +16,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-import com.company.yapara.kazan.MyWebViewClient;
 import android.annotation.SuppressLint;
 import android.app.DownloadManager;
 import android.graphics.Bitmap;
@@ -37,7 +36,6 @@ import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
-    String url = "http://codeflarelimited.com";
     WebView webView;
     
     @Override
@@ -52,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         webView.getSettings().setSupportZoom(true);
         webView.getSettings().setDomStorageEnabled(true);
         webView.setWebViewClient(new MyWebViewClient());
-        webView.loadUrl(url);
+       
         
 
         final DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -96,5 +94,22 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
     
-   
+    public class MyWebViewClient extends WebViewClient {
+
+    @Override
+    public boolean shouldOverrideUrlLoading(WebView view, String url) {
+        String hostname;
+
+        // YOUR HOSTNAME
+        hostname = "https://danis.manlik.com.tr/";
+
+        Uri uri = Uri.parse(url);
+        if (url.startsWith("file:") || uri.getHost() != null && uri.getHost().endsWith(hostname)) {
+            return false;
+        }
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+        view.getContext().startActivity(intent);
+        return true;
+    }
+  } 
 }
