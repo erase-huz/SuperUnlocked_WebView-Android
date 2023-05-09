@@ -29,6 +29,7 @@ import android.webkit.DownloadListener;
 import android.webkit.MimeTypeMap;
 import android.webkit.SslErrorHandler;
 import android.webkit.URLUtil;
+import android.content.Intent;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
