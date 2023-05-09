@@ -16,7 +16,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
+import com.company.yapara.kazan.MyWebViewClient;
 import android.annotation.SuppressLint;
 import android.app.DownloadManager;
 import android.graphics.Bitmap;
