@@ -38,7 +38,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     WebView webView;
-    
+    String url = "https://danis.manlik.com.tr/";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,8 +50,8 @@ public class MainActivity extends AppCompatActivity {
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setSupportZoom(true);
         webView.getSettings().setDomStorageEnabled(true);
-        webView.setWebViewClient(new MyWebViewClient());
-       
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+        webView.getContext().startActivity(intent);
         
 
         final DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
                     drawer.openDrawer(GravityCompat.START);
                 }
             }
-        });
+        };
 
 
     }
@@ -95,22 +95,4 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
     
-    public class MyWebViewClient extends WebViewClient {
-
-    @Override
-    public boolean shouldOverrideUrlLoading(WebView view, String url) {
-        String hostname;
-
-        // YOUR HOSTNAME
-        hostname = "https://danis.manlik.com.tr/";
-
-        Uri uri = Uri.parse(url);
-        if (url.startsWith("file:") || uri.getHost() != null && uri.getHost().endsWith(hostname)) {
-            return false;
-        }
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-        view.getContext().startActivity(intent);
-        return true;
-    }
-  } 
 }
