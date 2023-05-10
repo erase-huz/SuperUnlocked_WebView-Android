@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
                     drawer.openDrawer(GravityCompat.START);
                 }
             }
-        };
+        });
 
 
     }
