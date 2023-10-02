@@ -35,42 +35,31 @@ import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-
 public class MainActivity extends AppCompatActivity {
     WebView webView;
     String url = "https://danis.manlik.com.tr/";
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        
-        webView = findViewById(R.id.web);
-        webView.getSettings().setJavaScriptEnabled(true);
-        webView.getSettings().setSupportZoom(true);
-        webView.getSettings().setDomStorageEnabled(true);
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-        webView.getContext().startActivity(intent);
-        
-
-        final DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
-        toggle.syncState();
-
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-  
-
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (drawer.isDrawerOpen(GravityCompat.START)) {
-                    drawer.closeDrawer(GravityCompat.START);
-                } else {
-                    drawer.openDrawer(GravityCompat.START);
+    @Override protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_main);
+            Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+            setSupportActionBar(toolbar);
+            webView = findViewById(R.id.web);
+            webView.getSettings().setJavaScriptEnabled(true);
+            webView.getSettings().setSupportZoom(true);
+            webView.getSettings().setDomStorageEnabled(true); //Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));         //webView.getContext().startActivity(intent); // Bu satırı kaldırın veya yorum satırı yapın
+            webView.loadUrl(url); // Bu satırı ekleyin
+            final DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+            ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+            drawer.setDrawerListener(toggle);
+            toggle.syncState();
+            NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+            FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+            fab.setOnClickListener(new View.OnClickListener() {
+                        @Override public void onClick(View view) {
+                                if (drawer.isDrawerOpen(GravityCompat.START)) {
+                                    drawer.closeDrawer(GravityCompat.START);
+                                } else {
+                                drawer.openDrawer(GravityCompat.START);
                 }
             }
         });
