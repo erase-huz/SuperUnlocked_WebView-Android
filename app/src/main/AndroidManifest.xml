@@ -28,7 +28,7 @@
         <!-- MainActivity -->
         <activity
             android:name=".MainActivity"
-            android:exported="false" <!-- Eğer başka uygulamalar tarafından çağrılmayacaksa "false" olarak ayarlayın -->
+            android:exported="false" 
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
